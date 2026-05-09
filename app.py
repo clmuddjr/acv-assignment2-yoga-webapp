@@ -132,7 +132,7 @@ if uploaded_file is not None:
     uploaded_image = Image.open(uploaded_file)
 
     st.subheader("Uploaded Image")
-    st.image(uploaded_image, caption="Input image", width="stretch")
+    st.image(uploaded_image, caption="Input image", use_container_width=True)
 
     if st.button("Run Prediction"):
         with st.spinner("Running inference..."):
